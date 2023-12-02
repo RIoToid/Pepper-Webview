@@ -1,0 +1,25 @@
+topic: ~confirmation()
+language: enu
+include: lexicon_enu.top
+
+proposal: %translateASL $translateASL=1 You selected the translate ASL option 
+proposal: %learnASL $learnASL=1 ~neutral You selected the learn ASL
+
+#u:(~yes) ^gotoReactivate(yesProposal)
+#u:(~no) ^gotoReactivate(noProposal)
+
+u:(e:translateASLEvent) ^gotoReactivate(translateASL)
+u:(e:learnASLEvent) ^gotoReactivate(learnASL)
+
+u: (e:HomeEvent) home event fired
+u: (e:MyEvent) show letter event fired $displaySingleLetter=1 
+
+u: (still) i am still active
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+#u:(~hello) ~hello

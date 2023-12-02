@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1280, user-scalable=no" />
+    <link rel="stylesheet" href="../css/w3.css">
+    <link rel="stylesheet" type="text/css" href="../css/formatting.css">
+    <link rel="stylesheet" type="text/css" href="../css/letterASL.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="../js/qievents.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/displayinfo.js"></script>
+    <script type="application/javascript" src="../js/fastclick.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+
+        <div class="w3-white w3-padding w3-card" style="letter-spacing:4px; font-size: 25px;">
+            <img src="../pics/usek-logo-png.png" alt="Logo" style="width:5%">
+            <a class="w3-bar-item w3-button" onclick="raiseConfirmationEvent('HomeEvent')">Home</a>
+            |
+            <a class="w3-bar-item w3-button" onclick="raiseConfirmationEvent('translateASLEvent')"> Speech/Sign Translator</a>
+            |
+            <a class="w3-bar-item w3-button active" onclick="raiseConfirmationEvent('learnASLEvent')">Learn ASL</a>
+        </div>
+
+    </div>
+    <hr />
+    <br />
+
+    <br />
+    <span class="home1">
+        <br />
+        <div id="displayA">
+            <h1 class="title2" style="font-size: 50px;">Choose one of the following letters:</h1>
+
+            <div class="container1">
+                <button class="button1x" onclick="ALMemory.raiseEvent('MyEvent')">A</button>
+                <button class="button2x" onclick="showLetter('B', '../pics/b.jpg')">B</button>
+                <button class="button3x" onclick="showLetter('C', '../pics/c.jpg')">C</button>
+                <button class="button4x" onclick="showLetter('D', '../pics/d.jpg')">D</button>
+                <button class="button5x" onclick="showLetter('E', '../pics/e.jpg')">E</button>
+                <button class="button6x" onclick="showLetter('F', '../pics/f.jpg')">F</button>
+                <button class="button7x" onclick="showLetter('G', '../pics/g.png')">G</button>
+            </div>
+            <br />
+
+            <div class="container1">
+                <button class="button8x" onclick="raiseConfirmationEvent('learnASLEvent')">
+                    Back
+                </button>
+            </div>
+
+
+        </div>
+    </span>
+
+    <a href="../pages/translateASL.html"></a>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+        <p style="font-size: large;">Powered by Team ASL | All rights reserved &copy; 2023
+        </p>
+    </footer>
+</body>
+<script type="text/javascript">
+    displayPageInformation();
+</script>
+
+</html>
